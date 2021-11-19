@@ -1,1 +1,2 @@
-web: main:app --bind 0.0.0.0:${PORT}
+web: python main.py
+heroku config:add PORT=33507 
