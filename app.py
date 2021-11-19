@@ -10,4 +10,5 @@ def user(name):
 	return '<h1>Hello, {0}!</h1>'.format(name)
 
 if __name__ == '__main__':
-    app.run(threaded=True, int(os.getenv('PORT')))
+    port = int(os.environ.get('PORT', 5000))
+    application.run(host='0.0.0.0', port=port)
